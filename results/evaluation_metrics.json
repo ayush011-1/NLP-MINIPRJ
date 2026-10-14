@@ -1,0 +1,1244 @@
+{
+  "Multinomial Naive Bayes": {
+    "validation": {
+      "accuracy": 0.7195,
+      "macro_precision": 0.8614,
+      "macro_recall": 0.5037,
+      "macro_f1": 0.5329,
+      "weighted_precision": 0.78,
+      "weighted_recall": 0.7195,
+      "weighted_f1": 0.6781,
+      "per_class": {
+        "sadness": {
+          "precision": 0.6852,
+          "recall": 0.8982,
+          "f1_score": 0.7773,
+          "support": 550
+        },
+        "joy": {
+          "precision": 0.6842,
+          "recall": 0.9631,
+          "f1_score": 0.8,
+          "support": 704
+        },
+        "love": {
+          "precision": 0.9697,
+          "recall": 0.1798,
+          "f1_score": 0.3033,
+          "support": 178
+        },
+        "anger": {
+          "precision": 0.9521,
+          "recall": 0.5055,
+          "f1_score": 0.6603,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.8774,
+          "recall": 0.4387,
+          "f1_score": 0.5849,
+          "support": 212
+        },
+        "surprise": {
+          "precision": 1.0,
+          "recall": 0.037,
+          "f1_score": 0.0714,
+          "support": 81
+        }
+      },
+      "confusion_matrix": [
+        [
+          494,
+          51,
+          0,
+          2,
+          3,
+          0
+        ],
+        [
+          24,
+          678,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          38,
+          107,
+          32,
+          1,
+          0,
+          0
+        ],
+        [
+          70,
+          62,
+          0,
+          139,
+          4,
+          0
+        ],
+        [
+          59,
+          57,
+          0,
+          3,
+          93,
+          0
+        ],
+        [
+          36,
+          36,
+          0,
+          0,
+          6,
+          3
+        ]
+      ],
+      "confusion_matrix_normalized": [
+        [
+          0.8982,
+          0.0927,
+          0.0,
+          0.0036,
+          0.0055,
+          0.0
+        ],
+        [
+          0.0341,
+          0.9631,
+          0.0014,
+          0.0014,
+          0.0,
+          0.0
+        ],
+        [
+          0.2135,
+          0.6011,
+          0.1798,
+          0.0056,
+          0.0,
+          0.0
+        ],
+        [
+          0.2545,
+          0.2255,
+          0.0,
+          0.5055,
+          0.0145,
+          0.0
+        ],
+        [
+          0.2783,
+          0.2689,
+          0.0,
+          0.0142,
+          0.4387,
+          0.0
+        ],
+        [
+          0.4444,
+          0.4444,
+          0.0,
+          0.0,
+          0.0741,
+          0.037
+        ]
+      ],
+      "classification_report": {
+        "sadness": {
+          "precision": 0.6851595006934813,
+          "recall": 0.8981818181818182,
+          "f1-score": 0.7773406766325728,
+          "support": 550.0
+        },
+        "joy": {
+          "precision": 0.6841574167507568,
+          "recall": 0.9630681818181818,
+          "f1-score": 0.8,
+          "support": 704.0
+        },
+        "love": {
+          "precision": 0.9696969696969697,
+          "recall": 0.1797752808988764,
+          "f1-score": 0.3033175355450237,
+          "support": 178.0
+        },
+        "anger": {
+          "precision": 0.952054794520548,
+          "recall": 0.5054545454545455,
+          "f1-score": 0.6603325415676959,
+          "support": 275.0
+        },
+        "fear": {
+          "precision": 0.8773584905660378,
+          "recall": 0.4386792452830189,
+          "f1-score": 0.5849056603773585,
+          "support": 212.0
+        },
+        "surprise": {
+          "precision": 1.0,
+          "recall": 0.037037037037037035,
+          "f1-score": 0.07142857142857142,
+          "support": 81.0
+        },
+        "accuracy": 0.7195,
+        "macro avg": {
+          "precision": 0.8614045287046324,
+          "recall": 0.5036993514455796,
+          "f1-score": 0.5328874975918705,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.7799528379365794,
+          "recall": 0.7195,
+          "f1-score": 0.6780525283458799,
+          "support": 2000.0
+        }
+      },
+      "labels": [
+        "sadness",
+        "joy",
+        "love",
+        "anger",
+        "fear",
+        "surprise"
+      ]
+    },
+    "test": {
+      "accuracy": 0.734,
+      "macro_precision": 0.8452,
+      "macro_recall": 0.5092,
+      "macro_f1": 0.5393,
+      "weighted_precision": 0.7764,
+      "weighted_recall": 0.734,
+      "weighted_f1": 0.6962,
+      "per_class": {
+        "sadness": {
+          "precision": 0.7327,
+          "recall": 0.8916,
+          "f1_score": 0.8043,
+          "support": 581
+        },
+        "joy": {
+          "precision": 0.6843,
+          "recall": 0.9698,
+          "f1_score": 0.8024,
+          "support": 695
+        },
+        "love": {
+          "precision": 0.8621,
+          "recall": 0.1572,
+          "f1_score": 0.266,
+          "support": 159
+        },
+        "anger": {
+          "precision": 0.9211,
+          "recall": 0.5091,
+          "f1_score": 0.6557,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.871,
+          "recall": 0.4821,
+          "f1_score": 0.6207,
+          "support": 224
+        },
+        "surprise": {
+          "precision": 1.0,
+          "recall": 0.0455,
+          "f1_score": 0.087,
+          "support": 66
+        }
+      },
+      "confusion_matrix": [
+        [
+          518,
+          56,
+          1,
+          4,
+          2,
+          0
+        ],
+        [
+          18,
+          674,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          30,
+          102,
+          25,
+          2,
+          0,
+          0
+        ],
+        [
+          66,
+          67,
+          0,
+          140,
+          2,
+          0
+        ],
+        [
+          59,
+          51,
+          0,
+          6,
+          108,
+          0
+        ],
+        [
+          16,
+          35,
+          0,
+          0,
+          12,
+          3
+        ]
+      ],
+      "confusion_matrix_normalized": [
+        [
+          0.8916,
+          0.0964,
+          0.0017,
+          0.0069,
+          0.0034,
+          0.0
+        ],
+        [
+          0.0259,
+          0.9698,
+          0.0043,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.1887,
+          0.6415,
+          0.1572,
+          0.0126,
+          0.0,
+          0.0
+        ],
+        [
+          0.24,
+          0.2436,
+          0.0,
+          0.5091,
+          0.0073,
+          0.0
+        ],
+        [
+          0.2634,
+          0.2277,
+          0.0,
+          0.0268,
+          0.4821,
+          0.0
+        ],
+        [
+          0.2424,
+          0.5303,
+          0.0,
+          0.0,
+          0.1818,
+          0.0455
+        ]
+      ],
+      "classification_report": {
+        "sadness": {
+          "precision": 0.7326732673267327,
+          "recall": 0.891566265060241,
+          "f1-score": 0.8043478260869565,
+          "support": 581.0
+        },
+        "joy": {
+          "precision": 0.6842639593908629,
+          "recall": 0.9697841726618706,
+          "f1-score": 0.8023809523809524,
+          "support": 695.0
+        },
+        "love": {
+          "precision": 0.8620689655172413,
+          "recall": 0.15723270440251572,
+          "f1-score": 0.26595744680851063,
+          "support": 159.0
+        },
+        "anger": {
+          "precision": 0.9210526315789473,
+          "recall": 0.509090909090909,
+          "f1-score": 0.6557377049180327,
+          "support": 275.0
+        },
+        "fear": {
+          "precision": 0.8709677419354839,
+          "recall": 0.48214285714285715,
+          "f1-score": 0.6206896551724138,
+          "support": 224.0
+        },
+        "surprise": {
+          "precision": 1.0,
+          "recall": 0.045454545454545456,
+          "f1-score": 0.08695652173913043,
+          "support": 66.0
+        },
+        "accuracy": 0.734,
+        "macro avg": {
+          "precision": 0.8451710942915446,
+          "recall": 0.5092119089688231,
+          "f1-score": 0.5393450178509994,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.7763509167442407,
+          "recall": 0.734,
+          "f1-score": 0.6961847824748495,
+          "support": 2000.0
+        }
+      },
+      "labels": [
+        "sadness",
+        "joy",
+        "love",
+        "anger",
+        "fear",
+        "surprise"
+      ]
+    }
+  },
+  "Logistic Regression": {
+    "validation": {
+      "accuracy": 0.865,
+      "macro_precision": 0.8772,
+      "macro_recall": 0.7795,
+      "macro_f1": 0.8179,
+      "weighted_precision": 0.8674,
+      "weighted_recall": 0.865,
+      "weighted_f1": 0.8608,
+      "per_class": {
+        "sadness": {
+          "precision": 0.8552,
+          "recall": 0.9345,
+          "f1_score": 0.8931,
+          "support": 550
+        },
+        "joy": {
+          "precision": 0.8479,
+          "recall": 0.9503,
+          "f1_score": 0.8962,
+          "support": 704
+        },
+        "love": {
+          "precision": 0.8626,
+          "recall": 0.6348,
+          "f1_score": 0.7314,
+          "support": 178
+        },
+        "anger": {
+          "precision": 0.9237,
+          "recall": 0.8364,
+          "f1_score": 0.8779,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.887,
+          "recall": 0.7406,
+          "f1_score": 0.8072,
+          "support": 212
+        },
+        "surprise": {
+          "precision": 0.8868,
+          "recall": 0.5802,
+          "f1_score": 0.7015,
+          "support": 81
+        }
+      },
+      "confusion_matrix": [
+        [
+          514,
+          20,
+          2,
+          8,
+          5,
+          1
+        ],
+        [
+          14,
+          669,
+          16,
+          4,
+          1,
+          0
+        ],
+        [
+          17,
+          45,
+          113,
+          2,
+          1,
+          0
+        ],
+        [
+          19,
+          22,
+          0,
+          230,
+          4,
+          0
+        ],
+        [
+          25,
+          21,
+          0,
+          4,
+          157,
+          5
+        ],
+        [
+          12,
+          12,
+          0,
+          1,
+          9,
+          47
+        ]
+      ],
+      "confusion_matrix_normalized": [
+        [
+          0.9345,
+          0.0364,
+          0.0036,
+          0.0145,
+          0.0091,
+          0.0018
+        ],
+        [
+          0.0199,
+          0.9503,
+          0.0227,
+          0.0057,
+          0.0014,
+          0.0
+        ],
+        [
+          0.0955,
+          0.2528,
+          0.6348,
+          0.0112,
+          0.0056,
+          0.0
+        ],
+        [
+          0.0691,
+          0.08,
+          0.0,
+          0.8364,
+          0.0145,
+          0.0
+        ],
+        [
+          0.1179,
+          0.0991,
+          0.0,
+          0.0189,
+          0.7406,
+          0.0236
+        ],
+        [
+          0.1481,
+          0.1481,
+          0.0,
+          0.0123,
+          0.1111,
+          0.5802
+        ]
+      ],
+      "classification_report": {
+        "sadness": {
+          "precision": 0.8552412645590682,
+          "recall": 0.9345454545454546,
+          "f1-score": 0.893136403127715,
+          "support": 550.0
+        },
+        "joy": {
+          "precision": 0.8479087452471483,
+          "recall": 0.9502840909090909,
+          "f1-score": 0.8961821835231079,
+          "support": 704.0
+        },
+        "love": {
+          "precision": 0.8625954198473282,
+          "recall": 0.6348314606741573,
+          "f1-score": 0.7313915857605178,
+          "support": 178.0
+        },
+        "anger": {
+          "precision": 0.9236947791164659,
+          "recall": 0.8363636363636363,
+          "f1-score": 0.8778625954198473,
+          "support": 275.0
+        },
+        "fear": {
+          "precision": 0.8870056497175142,
+          "recall": 0.7405660377358491,
+          "f1-score": 0.8071979434447301,
+          "support": 212.0
+        },
+        "surprise": {
+          "precision": 0.8867924528301887,
+          "recall": 0.5802469135802469,
+          "f1-score": 0.7014925373134329,
+          "support": 81.0
+        },
+        "accuracy": 0.865,
+        "macro avg": {
+          "precision": 0.877206385219619,
+          "recall": 0.7794729323014059,
+          "f1-score": 0.8178772080982251,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.8673719437853454,
+          "recall": 0.865,
+          "f1-score": 0.860842027229506,
+          "support": 2000.0
+        }
+      },
+      "labels": [
+        "sadness",
+        "joy",
+        "love",
+        "anger",
+        "fear",
+        "surprise"
+      ]
+    },
+    "test": {
+      "accuracy": 0.859,
+      "macro_precision": 0.8519,
+      "macro_recall": 0.7489,
+      "macro_f1": 0.7864,
+      "weighted_precision": 0.8591,
+      "weighted_recall": 0.859,
+      "weighted_f1": 0.8537,
+      "per_class": {
+        "sadness": {
+          "precision": 0.8825,
+          "recall": 0.9174,
+          "f1_score": 0.8996,
+          "support": 581
+        },
+        "joy": {
+          "precision": 0.8314,
+          "recall": 0.9511,
+          "f1_score": 0.8872,
+          "support": 695
+        },
+        "love": {
+          "precision": 0.819,
+          "recall": 0.5975,
+          "f1_score": 0.6909,
+          "support": 159
+        },
+        "anger": {
+          "precision": 0.9076,
+          "recall": 0.8218,
+          "f1_score": 0.8626,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.8706,
+          "recall": 0.7812,
+          "f1_score": 0.8235,
+          "support": 224
+        },
+        "surprise": {
+          "precision": 0.8,
+          "recall": 0.4242,
+          "f1_score": 0.5545,
+          "support": 66
+        }
+      },
+      "confusion_matrix": [
+        [
+          533,
+          26,
+          1,
+          15,
+          6,
+          0
+        ],
+        [
+          10,
+          661,
+          19,
+          0,
+          2,
+          3
+        ],
+        [
+          9,
+          53,
+          95,
+          2,
+          0,
+          0
+        ],
+        [
+          24,
+          20,
+          1,
+          226,
+          4,
+          0
+        ],
+        [
+          24,
+          15,
+          0,
+          6,
+          175,
+          4
+        ],
+        [
+          4,
+          20,
+          0,
+          0,
+          14,
+          28
+        ]
+      ],
+      "confusion_matrix_normalized": [
+        [
+          0.9174,
+          0.0448,
+          0.0017,
+          0.0258,
+          0.0103,
+          0.0
+        ],
+        [
+          0.0144,
+          0.9511,
+          0.0273,
+          0.0,
+          0.0029,
+          0.0043
+        ],
+        [
+          0.0566,
+          0.3333,
+          0.5975,
+          0.0126,
+          0.0,
+          0.0
+        ],
+        [
+          0.0873,
+          0.0727,
+          0.0036,
+          0.8218,
+          0.0145,
+          0.0
+        ],
+        [
+          0.1071,
+          0.067,
+          0.0,
+          0.0268,
+          0.7812,
+          0.0179
+        ],
+        [
+          0.0606,
+          0.303,
+          0.0,
+          0.0,
+          0.2121,
+          0.4242
+        ]
+      ],
+      "classification_report": {
+        "sadness": {
+          "precision": 0.8824503311258278,
+          "recall": 0.9173838209982789,
+          "f1-score": 0.8995780590717299,
+          "support": 581.0
+        },
+        "joy": {
+          "precision": 0.8314465408805032,
+          "recall": 0.9510791366906475,
+          "f1-score": 0.887248322147651,
+          "support": 695.0
+        },
+        "love": {
+          "precision": 0.8189655172413793,
+          "recall": 0.5974842767295597,
+          "f1-score": 0.6909090909090909,
+          "support": 159.0
+        },
+        "anger": {
+          "precision": 0.9076305220883534,
+          "recall": 0.8218181818181818,
+          "f1-score": 0.8625954198473282,
+          "support": 275.0
+        },
+        "fear": {
+          "precision": 0.8706467661691543,
+          "recall": 0.78125,
+          "f1-score": 0.8235294117647058,
+          "support": 224.0
+        },
+        "surprise": {
+          "precision": 0.8,
+          "recall": 0.42424242424242425,
+          "f1-score": 0.5544554455445545,
+          "support": 66.0
+        },
+        "accuracy": 0.859,
+        "macro avg": {
+          "precision": 0.8518566129175363,
+          "recall": 0.7488763067465154,
+          "f1-score": 0.7863859582141769,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.8590988873668114,
+          "recall": 0.859,
+          "f1-score": 0.853712684883544,
+          "support": 2000.0
+        }
+      },
+      "labels": [
+        "sadness",
+        "joy",
+        "love",
+        "anger",
+        "fear",
+        "surprise"
+      ]
+    }
+  },
+  "Linear SVC": {
+    "validation": {
+      "accuracy": 0.902,
+      "macro_precision": 0.881,
+      "macro_recall": 0.8642,
+      "macro_f1": 0.8721,
+      "weighted_precision": 0.9017,
+      "weighted_recall": 0.902,
+      "weighted_f1": 0.9015,
+      "per_class": {
+        "sadness": {
+          "precision": 0.913,
+          "recall": 0.9345,
+          "f1_score": 0.9236,
+          "support": 550
+        },
+        "joy": {
+          "precision": 0.9149,
+          "recall": 0.9318,
+          "f1_score": 0.9233,
+          "support": 704
+        },
+        "love": {
+          "precision": 0.8232,
+          "recall": 0.8371,
+          "f1_score": 0.8301,
+          "support": 178
+        },
+        "anger": {
+          "precision": 0.9296,
+          "recall": 0.9127,
+          "f1_score": 0.9211,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.8918,
+          "recall": 0.816,
+          "f1_score": 0.8522,
+          "support": 212
+        },
+        "surprise": {
+          "precision": 0.8133,
+          "recall": 0.7531,
+          "f1_score": 0.7821,
+          "support": 81
+        }
+      },
+      "confusion_matrix": [
+        [
+          514,
+          14,
+          5,
+          8,
+          7,
+          2
+        ],
+        [
+          14,
+          656,
+          26,
+          4,
+          3,
+          1
+        ],
+        [
+          5,
+          23,
+          149,
+          0,
+          1,
+          0
+        ],
+        [
+          13,
+          8,
+          0,
+          251,
+          3,
+          0
+        ],
+        [
+          13,
+          8,
+          0,
+          7,
+          173,
+          11
+        ],
+        [
+          4,
+          8,
+          1,
+          0,
+          7,
+          61
+        ]
+      ],
+      "confusion_matrix_normalized": [
+        [
+          0.9345,
+          0.0255,
+          0.0091,
+          0.0145,
+          0.0127,
+          0.0036
+        ],
+        [
+          0.0199,
+          0.9318,
+          0.0369,
+          0.0057,
+          0.0043,
+          0.0014
+        ],
+        [
+          0.0281,
+          0.1292,
+          0.8371,
+          0.0,
+          0.0056,
+          0.0
+        ],
+        [
+          0.0473,
+          0.0291,
+          0.0,
+          0.9127,
+          0.0109,
+          0.0
+        ],
+        [
+          0.0613,
+          0.0377,
+          0.0,
+          0.033,
+          0.816,
+          0.0519
+        ],
+        [
+          0.0494,
+          0.0988,
+          0.0123,
+          0.0,
+          0.0864,
+          0.7531
+        ]
+      ],
+      "classification_report": {
+        "sadness": {
+          "precision": 0.9129662522202486,
+          "recall": 0.9345454545454546,
+          "f1-score": 0.9236298292902066,
+          "support": 550.0
+        },
+        "joy": {
+          "precision": 0.9149232914923291,
+          "recall": 0.9318181818181818,
+          "f1-score": 0.9232934553131598,
+          "support": 704.0
+        },
+        "love": {
+          "precision": 0.8232044198895028,
+          "recall": 0.8370786516853933,
+          "f1-score": 0.83008356545961,
+          "support": 178.0
+        },
+        "anger": {
+          "precision": 0.9296296296296296,
+          "recall": 0.9127272727272727,
+          "f1-score": 0.9211009174311927,
+          "support": 275.0
+        },
+        "fear": {
+          "precision": 0.8917525773195877,
+          "recall": 0.8160377358490566,
+          "f1-score": 0.8522167487684729,
+          "support": 212.0
+        },
+        "surprise": {
+          "precision": 0.8133333333333334,
+          "recall": 0.7530864197530864,
+          "f1-score": 0.782051282051282,
+          "support": 81.0
+        },
+        "accuracy": 0.902,
+        "macro avg": {
+          "precision": 0.8809682506474386,
+          "recall": 0.8642156193964076,
+          "f1-score": 0.8720626330523206,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.9016737586059844,
+          "recall": 0.902,
+          "f1-score": 0.9015343650902682,
+          "support": 2000.0
+        }
+      },
+      "labels": [
+        "sadness",
+        "joy",
+        "love",
+        "anger",
+        "fear",
+        "surprise"
+      ]
+    },
+    "test": {
+      "accuracy": 0.8825,
+      "macro_precision": 0.8387,
+      "macro_recall": 0.8161,
+      "macro_f1": 0.8266,
+      "weighted_precision": 0.8809,
+      "weighted_recall": 0.8825,
+      "weighted_f1": 0.8814,
+      "per_class": {
+        "sadness": {
+          "precision": 0.9141,
+          "recall": 0.9157,
+          "f1_score": 0.9149,
+          "support": 581
+        },
+        "joy": {
+          "precision": 0.8971,
+          "recall": 0.9281,
+          "f1_score": 0.9123,
+          "support": 695
+        },
+        "love": {
+          "precision": 0.7682,
+          "recall": 0.7296,
+          "f1_score": 0.7484,
+          "support": 159
+        },
+        "anger": {
+          "precision": 0.8963,
+          "recall": 0.88,
+          "f1_score": 0.8881,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.8604,
+          "recall": 0.8527,
+          "f1_score": 0.8565,
+          "support": 224
+        },
+        "surprise": {
+          "precision": 0.6964,
+          "recall": 0.5909,
+          "f1_score": 0.6393,
+          "support": 66
+        }
+      },
+      "confusion_matrix": [
+        [
+          532,
+          19,
+          3,
+          18,
+          9,
+          0
+        ],
+        [
+          9,
+          645,
+          30,
+          0,
+          4,
+          7
+        ],
+        [
+          5,
+          33,
+          116,
+          3,
+          0,
+          2
+        ],
+        [
+          16,
+          8,
+          2,
+          242,
+          6,
+          1
+        ],
+        [
+          17,
+          3,
+          0,
+          6,
+          191,
+          7
+        ],
+        [
+          3,
+          11,
+          0,
+          1,
+          12,
+          39
+        ]
+      ],
+      "confusion_matrix_normalized": [
+        [
+          0.9157,
+          0.0327,
+          0.0052,
+          0.031,
+          0.0155,
+          0.0
+        ],
+        [
+          0.0129,
+          0.9281,
+          0.0432,
+          0.0,
+          0.0058,
+          0.0101
+        ],
+        [
+          0.0314,
+          0.2075,
+          0.7296,
+          0.0189,
+          0.0,
+          0.0126
+        ],
+        [
+          0.0582,
+          0.0291,
+          0.0073,
+          0.88,
+          0.0218,
+          0.0036
+        ],
+        [
+          0.0759,
+          0.0134,
+          0.0,
+          0.0268,
+          0.8527,
+          0.0312
+        ],
+        [
+          0.0455,
+          0.1667,
+          0.0,
+          0.0152,
+          0.1818,
+          0.5909
+        ]
+      ],
+      "classification_report": {
+        "sadness": {
+          "precision": 0.9140893470790378,
+          "recall": 0.9156626506024096,
+          "f1-score": 0.9148753224419605,
+          "support": 581.0
+        },
+        "joy": {
+          "precision": 0.8970792767732962,
+          "recall": 0.9280575539568345,
+          "f1-score": 0.9123055162659123,
+          "support": 695.0
+        },
+        "love": {
+          "precision": 0.7682119205298014,
+          "recall": 0.7295597484276729,
+          "f1-score": 0.7483870967741936,
+          "support": 159.0
+        },
+        "anger": {
+          "precision": 0.8962962962962963,
+          "recall": 0.88,
+          "f1-score": 0.8880733944954129,
+          "support": 275.0
+        },
+        "fear": {
+          "precision": 0.8603603603603603,
+          "recall": 0.8526785714285714,
+          "f1-score": 0.8565022421524664,
+          "support": 224.0
+        },
+        "surprise": {
+          "precision": 0.6964285714285714,
+          "recall": 0.5909090909090909,
+          "f1-score": 0.639344262295082,
+          "support": 66.0
+        },
+        "accuracy": 0.8825,
+        "macro avg": {
+          "precision": 0.8387442954112272,
+          "recall": 0.8161446025540965,
+          "f1-score": 0.8265813057375045,
+          "support": 2000.0
+        },
+        "weighted avg": {
+          "precision": 0.8809340956455441,
+          "recall": 0.8825,
+          "f1-score": 0.8814309257852756,
+          "support": 2000.0
+        }
+      },
+      "labels": [
+        "sadness",
+        "joy",
+        "love",
+        "anger",
+        "fear",
+        "surprise"
+      ]
+    }
+  }
+}

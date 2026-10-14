@@ -1,0 +1,137 @@
+{
+  "app": {
+    "title": "ManSanket",
+    "wordmark": "मनसंकेत",
+    "tagline": "Understand the emotions expressed through words.",
+    "subtitle": "Discover the emotional tone behind everyday text in English, Hindi, and Marathi.",
+    "topic": "Academic Topic 10: Emotion Detection from Text"
+  },
+  "nav": {
+    "home": "Home",
+    "analyzer": "Emotion Analyzer",
+    "academic_section": "Academic / Technical Details",
+    "overview": "Overview",
+    "analysis": "Emotion Analysis",
+    "evaluation": "Model Evaluation",
+    "explorer": "Dataset Explorer",
+    "explainability": "Explainability",
+    "methodology": "Methodology & Viva"
+  },
+  "home": {
+    "welcome_title": "Welcome to ManSanket",
+    "welcome_lead": "ManSanket helps you discover the emotional tone behind messages, reviews, social posts, and written thoughts. Whether your text is in English, Hindi, or Marathi, simply enter a sentence to see which emotion is most likely expressed.",
+    "cta_btn": "Analyze Text ✨",
+    "emotions_title": "The Six Emotions We Detect",
+    "emotions_subtitle": "Built on the widely recognized 6-class CARER emotional taxonomy:",
+    "disclaimer_title": "A Gentle Note on How This Works",
+    "disclaimer_body": "ManSanket provides an automated estimate based on patterns in written text. Language is nuanced and deeply personal; this tool is designed to assist exploration and understanding, not to make definitive psychological judgments of someone's feelings.",
+    "academic_prompt": "Looking for model evaluation matrices, dataset exploration, mathematical formulas, and viva questions?",
+    "academic_link": "Explore the Academic Details section in the sidebar."
+  },
+  "common": {
+    "language": "Language",
+    "analyze_btn": "Analyze Emotion ✨",
+    "clear_btn": "Clear",
+    "loading": "Analyzing text...",
+    "detected_lang": "Detected Language",
+    "script": "Script",
+    "confidence": "Confidence",
+    "accuracy": "Accuracy",
+    "macro_f1": "Macro F1",
+    "weighted_f1": "Weighted F1",
+    "sample_texts": "Try an Example",
+    "select_sample": "Choose an example...",
+    "input_label": "Enter text to analyze",
+    "input_placeholder": "Type or paste a sentence here (e.g., 'I am so excited to see you today!', 'आज निकाल लागला आणि खूप आनंद झाला', 'Bohot khush hu aaj')...",
+    "no_input_warn": "Please enter a sentence before analyzing.",
+    "primary_emotion": "Likely Emotion",
+    "disclaimer_title": "Academic Note on Model Explainability",
+    "disclaimer_body": "Highlighted words reflect statistical weights in the model's vocabulary. They do not constitute clinical or psychological assessments."
+  },
+  "emotions": {
+    "joy": "Joy / Happiness",
+    "sadness": "Sadness",
+    "anger": "Anger",
+    "fear": "Fear",
+    "surprise": "Surprise",
+    "love": "Love / Affection"
+  },
+  "emotion_descriptions": {
+    "joy": "Conveys happiness, delight, celebration, excitement, or satisfaction.",
+    "sadness": "Conveys sorrow, grief, disappointment, heartbreak, or feeling low.",
+    "love": "Conveys warmth, affection, romantic care, fondness, or gratitude.",
+    "anger": "Conveys frustration, annoyance, irritation, outrage, or resentment.",
+    "fear": "Conveys anxiety, worry, panic, nervousness, or vulnerability.",
+    "surprise": "Conveys astonishment, wonder, shock, or an unexpected reaction."
+  },
+  "analyzer": {
+    "title": "Emotion Analyzer",
+    "subtitle": "Discover the emotional expression in your sentence.",
+    "sample_prompt": "Try an example sentence:",
+    "samples": {
+      "joy": "Excited News",
+      "sadness": "Feeling Low",
+      "love": "Warm Affection",
+      "anger": "Frustrated Review",
+      "fear": "Worried Message",
+      "surprise": "Unexpected Event",
+      "mr_joy": "Marathi (Joy)",
+      "hi_anger": "Hindi (Anger)",
+      "hinglish_fear": "Hinglish (Fear)"
+    },
+    "likely_emotion_badge": "Likely Emotion",
+    "why_title": "Why this result?",
+    "influential_words_intro": "Words in your sentence that influenced this result most:",
+    "no_prominent_words": "The overall sentence structure guided this prediction.",
+    "breakdown_expander": "View Estimated Probability Breakdown",
+    "breakdown_note": "These percentages reflect the classifier's relative estimates across the 6 categories, not absolute human certainty.",
+    "advanced_options": "Advanced Settings",
+    "lang_override_label": "Language Option",
+    "auto_detect_label": "Automatic Detection (Default)",
+    "model_select_label": "Classification Model (Default: Linear SVC)",
+    "translation_title": "Translation Assistant (Optional)",
+    "translation_desc": "Because our primary model was trained on English vocabulary, direct predictions on Hindi and Marathi are approximate estimates. You can optionally enable translation assistance.",
+    "translation_consent": "I understand that my text will be sent to Google Translate to translate it into English before emotion analysis.",
+    "translation_active_notice": "Analysis performed using English translation: \"{translated}\"",
+    "translation_failed_notice": "The external translation helper could not be reached right now. Analyzed your original text directly instead.",
+    "non_english_direct_notice": "Notice: You entered text in {lang}. Because our primary model was trained on English vocabulary, direct predictions on non-English text are approximate estimates. For improved accuracy, you can enable the Translation Assistant in Advanced Settings.",
+    "english_direct_notice": "Direct text analysis."
+  },
+  "evaluation": {
+    "title": "Model Evaluation & Benchmark Comparison",
+    "subtitle": "Rigorous experimental comparison of traditional NLP algorithms across identical test benchmarks.",
+    "benchmark_summary": "English CARER Emotion Test Set (2,000 samples across 6 emotion classes)",
+    "multilingual_summary": "Marathi MahaEmotions Validation & Test Benchmarks",
+    "model_comparison": "Algorithm Comparison Table",
+    "confusion_matrix_title": "Confusion Matrix",
+    "classification_report_title": "Per-Class Classification Report",
+    "select_model": "Select Model to Inspect",
+    "metrics_explained": "Metric Definitions: Precision reflects false positive resistance, Recall measures class sensitivity, and F1-score balances both across skewed distributions."
+  },
+  "explorer": {
+    "title": "Dataset & Lexical Explorer",
+    "subtitle": "Inspect class distributions, lexical frequencies, and annotation properties of the datasets.",
+    "split_overview": "Dataset Split Summary",
+    "distribution_title": "Emotion Class Distribution",
+    "text_length_dist": "Text Length Distribution (Characters & Words)",
+    "frequent_terms": "Most Frequent N-Grams by Emotion",
+    "quality_checks": "Data Hygiene & Leakage Audit",
+    "leakage_clean": "Zero test/validation contamination into training split confirmed."
+  },
+  "explainability": {
+    "title": "Model Interpretability & Feature Attribution",
+    "subtitle": "Unpack how linear TF-IDF classifiers weigh vocabulary features across emotion categories.",
+    "how_it_works": "How TF-IDF Feature Attribution Works",
+    "how_it_works_desc": "In linear models (Logistic Regression, Linear SVC), each vocabulary token has a learned weight matrix W for each class c. The contribution of token i to emotion c is the product of its TF-IDF value and weight W[c, i].",
+    "global_importance": "Global Most Influential Terms per Emotion Class",
+    "local_attribution": "Local Sentence-Level Feature Inspection"
+  },
+  "methodology": {
+    "title": "Methodology, Mathematical Foundations & Viva Guide",
+    "subtitle": "Comprehensive academic overview of the NLP pipeline, algorithm equations, and oral examination questions.",
+    "problem_statement": "1. Problem Statement & Motivation",
+    "pipeline_arch": "2. System Architecture & Pipeline Workflow",
+    "math_foundations": "3. Mathematical Foundations of Implemented Classifiers",
+    "viva_questions": "4. Viva Preparation & Frequently Asked Questions"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "dataset_audit": {
+    "train_samples": 15969,
+    "val_samples": 2000,
+    "test_samples": 2000,
+    "train_duplicates_removed": 31,
+    "val_leakage": 5,
+    "test_leakage": 11
+  },
+  "vocabulary_size": 12000,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "sublinear_tf": true,
+  "emotion_classes": {
+    "0": "sadness",
+    "1": "joy",
+    "2": "love",
+    "3": "anger",
+    "4": "fear",
+    "5": "surprise"
+  },
+  "model_files": {
+    "vectorizer": "tfidf_vectorizer.joblib",
+    "multinomial_nb": "multinomial_nb.joblib",
+    "logistic_regression": "logistic_regression.joblib",
+    "linear_svc": "linear_svc.joblib"
+  }
+}
