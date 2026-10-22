@@ -56,8 +56,14 @@ Classifier Evaluation & Calibration (Platt Sigmoid Calibration for true posterio
 Linear Feature Attribution & Explainability (Token contributions: W[c, i] × x[i])
       │
       ▼
-Editorial UI Presentation (Localized in English, Hindi, and Marathi)
+Two-Tier User Interface (Localized across English, Hindi, and Marathi)
+├── Everyday Workspace: Welcoming Home & Emotion Analyzer (Plain language, badges, honest estimates)
+└── Academic Section: Collapsible in sidebar (Model Evaluation, Dataset Explorer, Explainability, Viva)
 ```
+
+### Two-Tier Experience Design
+- **Primary User Experience:** Clean, welcoming interface designed for non-technical users. Features one-click text analysis, plain-language emotion interpretations, confidence estimates, "Why this result?" influential word badges, and honest non-English estimation notices.
+- **Academic & Research Section:** Neatly collapsed in the sidebar for evaluators, students, and researchers to inspect performance benchmarks, confusion matrices, dataset distributions, mathematical feature attributions, and viva preparation.
 
 ---
 

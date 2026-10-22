@@ -91,7 +91,7 @@ with split_tab1:
     st.markdown(
         f"""
         <div style="font-size: 0.85rem; color: {PALETTE['text_secondary']}; margin-bottom: 1rem;">
-            <b>Observation on Imbalance:</b> The CARER benchmark exhibits natural class imbalance — <b>Joy</b> (33.5%) and <b>Sadness</b> (29.2%) constitute over 60% of samples, whereas <b>Surprise</b> (3.6%) and <b>Love</b> (8.1%) are relatively rare. This justifies reporting <b>Macro F1</b> alongside overall Accuracy.
+            <b>Observation on Imbalance:</b> The CARER benchmark exhibits natural class imbalance: <b>Joy</b> (33.5%) and <b>Sadness</b> (29.2%) constitute over 60% of samples, whereas <b>Surprise</b> (3.6%) and <b>Love</b> (8.1%) are relatively rare. This justifies reporting <b>Macro F1</b> alongside overall Accuracy.
         </div>
         """,
         unsafe_allow_html=True

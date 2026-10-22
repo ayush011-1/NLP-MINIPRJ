@@ -22,35 +22,35 @@ pages = {
         st.Page(
             render_home_page,
             title=t("nav.home", locale),
-            icon="🏠",
+            icon=None,
             default=True
         ),
         st.Page(
             "pages/1_Emotion_Analysis.py",
             title=t("nav.analyzer", locale),
-            icon="✨"
+            icon=None
         )
     ],
     t("nav.academic_section", locale): [
         st.Page(
             "pages/2_Model_Evaluation.py",
             title=t("nav.evaluation", locale),
-            icon="📊"
+            icon=None
         ),
         st.Page(
             "pages/3_Dataset_Explorer.py",
             title=t("nav.explorer", locale),
-            icon="📁"
+            icon=None
         ),
         st.Page(
             "pages/4_Model_Explainability.py",
             title=t("nav.explainability", locale),
-            icon="🔍"
+            icon=None
         ),
         st.Page(
             "pages/5_Methodology.py",
             title=t("nav.methodology", locale),
-            icon="📚"
+            icon=None
         )
     ]
 }

@@ -55,30 +55,27 @@ def render_home_page():
     )
 
     emotion_items = [
-        ("joy", "☀️", t("emotions.joy", locale), t("emotion_descriptions.joy", locale)),
-        ("sadness", "🌧️", t("emotions.sadness", locale), t("emotion_descriptions.sadness", locale)),
-        ("love", "💖", t("emotions.love", locale), t("emotion_descriptions.love", locale)),
-        ("anger", "🌋", t("emotions.anger", locale), t("emotion_descriptions.anger", locale)),
-        ("fear", "🛡️", t("emotions.fear", locale), t("emotion_descriptions.fear", locale)),
-        ("surprise", "🌟", t("emotions.surprise", locale), t("emotion_descriptions.surprise", locale)),
+        ("joy", t("emotions.joy", locale), t("emotion_descriptions.joy", locale)),
+        ("sadness", t("emotions.sadness", locale), t("emotion_descriptions.sadness", locale)),
+        ("love", t("emotions.love", locale), t("emotion_descriptions.love", locale)),
+        ("anger", t("emotions.anger", locale), t("emotion_descriptions.anger", locale)),
+        ("fear", t("emotions.fear", locale), t("emotion_descriptions.fear", locale)),
+        ("surprise", t("emotions.surprise", locale), t("emotion_descriptions.surprise", locale)),
     ]
 
-    # Render a clean, balanced 2-column or 3-column card grid
+    # Render a clean, balanced 2-column card grid
     col1, col2 = st.columns(2)
-    for idx, (emo_key, icon, name, desc) in enumerate(emotion_items):
+    for idx, (emo_key, name, desc) in enumerate(emotion_items):
         target_col = col1 if idx % 2 == 0 else col2
         accent_color = EMOTION_COLORS.get(emo_key, PALETTE["primary_accent"])
         with target_col:
             st.markdown(
                 f"""
-                <div class="editorial-card" style="border-left: 5px solid {accent_color}; margin-bottom: 1rem; padding: 1.1rem 1.3rem;">
-                    <div style="display: flex; align-items: center; margin-bottom: 0.35rem;">
-                        <span style="font-size: 1.3rem; margin-right: 0.5rem;">{icon}</span>
-                        <span style="font-size: 1.1rem; font-weight: 700; color: {accent_color};">
-                            {name}
-                        </span>
+                <div class="editorial-card" style="border-left: 4px solid {accent_color}; margin-bottom: 1rem; padding: 1.15rem 1.35rem;">
+                    <div style="font-size: 1.05rem; font-weight: 700; color: {accent_color}; margin-bottom: 0.35rem;">
+                        {name}
                     </div>
-                    <div style="font-size: 0.92rem; line-height: 1.5; color: {PALETTE['text_secondary']};">
+                    <div style="font-size: 0.92rem; line-height: 1.55; color: {PALETTE['text_secondary']};">
                         {desc}
                     </div>
                 </div>
@@ -93,7 +90,7 @@ def render_home_page():
         f"""
         <div class="editorial-card-alt" style="border-left: 4px solid {PALETTE['supporting_accent']}; margin-top: 1rem;">
             <div style="font-weight: 600; color: {PALETTE['primary_accent']}; font-size: 0.95rem; margin-bottom: 0.35rem;">
-                ℹ️ {t('home.disclaimer_title', locale)}
+                {t('home.disclaimer_title', locale)}
             </div>
             <div style="font-size: 0.9rem; line-height: 1.55; color: {PALETTE['text_secondary']};">
                 {t('home.disclaimer_body', locale)}

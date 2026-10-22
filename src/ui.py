@@ -85,10 +85,10 @@ EDITORIAL_CSS = f"""
 /* Emotion highlight card */
 .emotion-display-card {{
     background-color: {PALETTE["surface"]};
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 1.5rem 1.75rem;
     margin-bottom: 1.25rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }}
 
 /* Primary Buttons */
@@ -99,14 +99,24 @@ EDITORIAL_CSS = f"""
     border-radius: 6px !important;
     font-weight: 500 !important;
     padding: 0.55rem 1.4rem !important;
-    transition: all 0.2s ease !important;
+    transition: all 0.15s ease !important;
     font-size: 0.95rem !important;
+    cursor: pointer !important;
 }}
 
 .stButton > button:hover {{
     background-color: #243243 !important;
     border-color: #243243 !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+}}
+
+.stButton > button:active {{
+    transform: scale(0.98) !important;
+}}
+
+.stButton > button:focus-visible {{
+    outline: 2px solid {PALETTE["primary_accent"]} !important;
+    outline-offset: 2px !important;
 }}
 
 /* Secondary / Clear Buttons */
@@ -114,11 +124,18 @@ button[kind="secondary"] {{
     background-color: #FFFFFF !important;
     color: {PALETTE["text_primary"]} !important;
     border: 1px solid {PALETTE["border"]} !important;
+    border-radius: 6px !important;
+    transition: all 0.15s ease !important;
+    cursor: pointer !important;
 }}
 
 button[kind="secondary"]:hover {{
     background-color: {PALETTE["surface_alt"]} !important;
     border-color: {PALETTE["text_secondary"]} !important;
+}}
+
+button[kind="secondary"]:active {{
+    transform: scale(0.98) !important;
 }}
 
 /* Form inputs */
@@ -192,19 +209,8 @@ def setup_page(title: str):
 
 
 def render_sidebar():
-    """Render language selector and friendly identity in the sidebar."""
+    """Render clean language selection and navigation context in the sidebar."""
     with st.sidebar:
-        st.markdown(
-            f"""
-            <div style="padding-bottom: 0.75rem; border-bottom: 1px solid {PALETTE['border']}; margin-bottom: 1rem;">
-                <div style="font-family: 'Noto Serif Devanagari', Georgia, serif; font-size: 1.45rem; font-weight: 700; color: {PALETTE['primary_accent']};">मनसंकेत</div>
-                <div style="font-size: 0.8rem; color: {PALETTE['supporting_accent']}; font-weight: 600; text-transform: uppercase;">ManSanket</div>
-                <div style="font-size: 0.8rem; color: {PALETTE['text_secondary']}; margin-top: 0.15rem;">Text Emotion Detection</div>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-
         current_locale = st.session_state.get("locale", DEFAULT_LOCALE)
         locale_options = {
             "en": "English",
@@ -212,12 +218,24 @@ def render_sidebar():
             "mr": "मराठी (Marathi)"
         }
         
+        st.markdown(
+            f"""
+            <div style="padding-top: 0.2rem; padding-bottom: 0.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid {PALETTE['border']};">
+                <div style="font-size: 0.72rem; color: {PALETTE['text_secondary']}; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;">
+                    {t('common.language', current_locale)}
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
         selected_code = st.selectbox(
-            f"🌐 {t('common.language', current_locale)}",
+            t('common.language', current_locale),
             options=list(locale_options.keys()),
             format_func=lambda x: locale_options[x],
             index=list(locale_options.keys()).index(current_locale),
-            key="sidebar_language_selector"
+            key="sidebar_language_selector",
+            label_visibility="collapsed"
         )
         if selected_code != current_locale:
             st.session_state["locale"] = selected_code

@@ -30,15 +30,15 @@ def render_analyzer_page():
     # Preset sample sentences covering everyday situations
     SAMPLES = {
         "-- " + t("common.select_sample", locale) + " --": "",
-        f"☀️ {t('analyzer.samples.joy', locale)}": "I feel so genuinely happy, delighted, and energized by this wonderful news!",
-        f"🌧️ {t('analyzer.samples.sadness', locale)}": "I am feeling utterly broken, exhausted, and deeply disheartened today.",
-        f"💖 {t('analyzer.samples.love', locale)}": "I cherish every moment spent with you, thank you for your warmth and care.",
-        f"🌋 {t('analyzer.samples.anger', locale)}": "I am furious and absolutely disgusted by this unfair and corrupt decision.",
-        f"🛡️ {t('analyzer.samples.fear', locale)}": "I feel so anxious and terrified about what could go wrong tomorrow.",
-        f"🌟 {t('analyzer.samples.surprise', locale)}": "I was completely stunned and astonished when I opened the unexpected letter.",
-        f"🇮🇳 {t('analyzer.samples.mr_joy', locale)}": "आज निकाल लागला आणि मला मनापासून खूप आनंद झाला आहे!",
-        f"🇮🇳 {t('analyzer.samples.hi_anger', locale)}": "मुझे इस घटिया और झूठे बर्ताव पर बहुत ज्यादा गुस्सा आ रहा है!",
-        f"🇮🇳 {t('analyzer.samples.hinglish_fear', locale)}": "Bohot zyada darr lag raha hai exam ke results ko lekar yaar."
+        t("analyzer.samples.joy", locale): "I feel so genuinely happy, delighted, and energized by this wonderful news!",
+        t("analyzer.samples.sadness", locale): "I am feeling utterly broken, exhausted, and deeply disheartened today.",
+        t("analyzer.samples.love", locale): "I cherish every moment spent with you, thank you for your warmth and care.",
+        t("analyzer.samples.anger", locale): "I am furious and absolutely disgusted by this unfair and corrupt decision.",
+        t("analyzer.samples.fear", locale): "I feel so anxious and terrified about what could go wrong tomorrow.",
+        t("analyzer.samples.surprise", locale): "I was completely stunned and astonished when I opened the unexpected letter.",
+        t("analyzer.samples.mr_joy", locale): "आज निकाल लागला आणि मला मनापासून खूप आनंद झाला आहे!",
+        t("analyzer.samples.hi_anger", locale): "मुझे इस घटिया और झूठे बर्ताव पर बहुत ज्यादा गुस्सा आ रहा है!",
+        t("analyzer.samples.hinglish_fear", locale): "Bohot zyada darr lag raha hai exam ke results ko lekar yaar."
     }
 
     # Session state initialization for input text
@@ -51,7 +51,7 @@ def render_analyzer_page():
 
     # Sample selector (populates input without auto-analyzing)
     selected_sample = st.selectbox(
-        f"💡 {t('analyzer.sample_prompt', locale)}",
+        t("analyzer.sample_prompt", locale),
         options=list(SAMPLES.keys()),
         index=0,
         key="sample_selector_widget"
@@ -76,7 +76,7 @@ def render_analyzer_page():
     st.session_state["user_text_content"] = input_text
 
     # Advanced Settings (collapsed by default so everyday users aren't confused)
-    with st.expander(f"⚙️ {t('analyzer.advanced_options', locale)}", expanded=False):
+    with st.expander(t("analyzer.advanced_options", locale), expanded=False):
         col_adv1, col_adv2 = st.columns(2)
         with col_adv1:
             manual_lang = st.selectbox(
@@ -127,7 +127,7 @@ def render_analyzer_page():
     if analyze_clicked:
         current_text = st.session_state["user_text_content"].strip()
         if not current_text:
-            st.warning(f"⚠️ {t('common.no_input_warn', locale)}")
+            st.warning(t("common.no_input_warn", locale))
             st.session_state["analysis_result"] = None
         else:
             with st.spinner(t("common.loading", locale)):
@@ -154,9 +154,9 @@ def render_analyzer_page():
         # 1. Honest Language Route Notice
         if res.get("is_translation_mediated"):
             trans_safe = html.escape(res.get("translated_text", ""))
-            st.info(f"🌐 {t('analyzer.translation_active_notice', locale, translated=trans_safe)}")
+            st.info(t("analyzer.translation_active_notice", locale, translated=trans_safe))
         elif res.get("translation_note"):
-            st.warning(f"⚠️ {t('analyzer.translation_failed_notice', locale)}")
+            st.warning(t("analyzer.translation_failed_notice", locale))
         elif detected_code in ["hi", "mr", "hinglish", "mr-en-codemixed", "code-mixed"]:
             lang_display_name = lang_info.get("language_name", detected_code)
             st.markdown(
@@ -169,7 +169,7 @@ def render_analyzer_page():
             )
         else:
             # English direct
-            st.caption(f"✓ {t('analyzer.english_direct_notice', locale)}")
+            st.caption(t("analyzer.english_direct_notice", locale))
 
         # 2. Main Emotion Result Card
         localized_emotion_name = t(f"emotions.{pred_emotion}", locale)
@@ -178,19 +178,19 @@ def render_analyzer_page():
 
         st.markdown(
             f"""
-            <div class="emotion-display-card" style="border-left: 6px solid {color}; border-top: 1px solid {PALETTE['border']}; border-right: 1px solid {PALETTE['border']}; border-bottom: 1px solid {PALETTE['border']};">
-                <div style="font-size: 0.85rem; color: {PALETTE['text_secondary']}; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.35rem;">
+            <div class="emotion-display-card" style="border-left: 5px solid {color}; border-top: 1px solid {PALETTE['border']}; border-right: 1px solid {PALETTE['border']}; border-bottom: 1px solid {PALETTE['border']};">
+                <div style="font-size: 0.82rem; color: {PALETTE['text_secondary']}; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">
                     {t('analyzer.likely_emotion_badge', locale)}
                 </div>
                 <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.6rem;">
-                    <span style="font-size: 2.25rem; font-weight: 700; color: {color}; letter-spacing: 0.02em;">
+                    <span style="font-size: 2.25rem; font-weight: 700; color: {color}; letter-spacing: 0.01em;">
                         {localized_emotion_name}
                     </span>
-                    <span style="font-size: 1.05rem; font-weight: 500; color: {PALETTE['text_secondary']};">
+                    <span style="font-size: 1rem; font-weight: 500; color: {PALETTE['text_secondary']};">
                         ({confidence_percent}% confidence estimate)
                     </span>
                 </div>
-                <div style="font-size: 0.96rem; line-height: 1.55; color: {PALETTE['text_primary']};">
+                <div style="font-size: 0.95rem; line-height: 1.55; color: {PALETTE['text_primary']};">
                     {emotion_description}
                 </div>
             </div>
@@ -206,7 +206,7 @@ def render_analyzer_page():
             f"""
             <div class="editorial-card" style="padding: 1.25rem 1.5rem; margin-bottom: 1rem;">
                 <div style="font-weight: 600; font-size: 1rem; color: {PALETTE['primary_accent']}; margin-bottom: 0.5rem;">
-                    💭 {t('analyzer.why_title', locale)}
+                    {t('analyzer.why_title', locale)}
                 </div>
             """,
             unsafe_allow_html=True
@@ -215,7 +215,7 @@ def render_analyzer_page():
         if top_words:
             # Render influential words in soft, readable badges
             badges_html = " ".join([
-                f'<span style="display: inline-block; background-color: {PALETTE["surface_alt"]}; border: 1px solid {PALETTE["border"]}; color: {PALETTE["primary_accent"]}; font-weight: 600; padding: 0.2rem 0.55rem; border-radius: 4px; margin: 0.15rem 0.2rem; font-size: 0.9rem;">{html.escape(w)}</span>'
+                f'<span style="display: inline-block; background-color: {PALETTE["surface_alt"]}; border: 1px solid {PALETTE["border"]}; color: {PALETTE["primary_accent"]}; font-weight: 600; padding: 0.2rem 0.55rem; border-radius: 4px; margin: 0.15rem 0.2rem; font-size: 0.88rem;">{html.escape(w)}</span>'
                 for w in top_words
             ])
             st.markdown(
@@ -242,7 +242,7 @@ def render_analyzer_page():
         st.markdown("</div>", unsafe_allow_html=True)
 
         # 4. Optional Expandable Breakdown (Clean & Compact)
-        with st.expander(f"📊 {t('analyzer.breakdown_expander', locale)}", expanded=False):
+        with st.expander(t("analyzer.breakdown_expander", locale), expanded=False):
             st.caption(t("analyzer.breakdown_note", locale))
             prob_dict = res.get("probabilities", {})
             if prob_dict:

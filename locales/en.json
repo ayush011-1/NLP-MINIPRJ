@@ -20,7 +20,7 @@
   "home": {
     "welcome_title": "Welcome to ManSanket",
     "welcome_lead": "ManSanket helps you discover the emotional tone behind messages, reviews, social posts, and written thoughts. Whether your text is in English, Hindi, or Marathi, simply enter a sentence to see which emotion is most likely expressed.",
-    "cta_btn": "Analyze Text ✨",
+    "cta_btn": "Analyze Text",
     "emotions_title": "The Six Emotions We Detect",
     "emotions_subtitle": "Built on the widely recognized 6-class CARER emotional taxonomy:",
     "disclaimer_title": "A Gentle Note on How This Works",
@@ -30,7 +30,7 @@
   },
   "common": {
     "language": "Language",
-    "analyze_btn": "Analyze Emotion ✨",
+    "analyze_btn": "Analyze Emotion",
     "clear_btn": "Clear",
     "loading": "Analyzing text...",
     "detected_lang": "Detected Language",
